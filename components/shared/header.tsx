@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import { Button } from "../ui";
-import { Container } from "./";
+import { Container, Title } from "./";
 import { ArrowRight, ShoppingCart, User } from "lucide-react";
 
 interface Props {
@@ -16,7 +16,11 @@ export const Header = ({ className }: Props) => {
         <div className="flex items-center gap-4">
           <Image src="/logo.png" alt="logo" width={35} height={35} />
           <div>
-            <h1 className="text-2xl uppercase font-black">Company Name</h1>
+            <Title
+              text="Company name"
+              size="2xl"
+              className="text-2xl uppercase font-black"
+            />
             <p className="text-sm text-gray-400 leading-3">company slogan</p>
           </div>
         </div>
