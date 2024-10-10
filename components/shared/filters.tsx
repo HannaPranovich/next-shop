@@ -1,13 +1,9 @@
 import { CheckboxFilterGroup, FilterCheckbox, Title } from "./";
 import { Input } from "../ui";
 
-interface Props {
-  className?: string;
-}
-
-export const Filters = ({ className }: Props) => {
+export const Filters = () => {
   return (
-    <div className={className}>
+    <div>
       <Title text="Filters" className="mb-5 font-bold" />
 
       <div className="flex flex-col gap-4">
