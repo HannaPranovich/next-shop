@@ -31,11 +31,14 @@ export const Filters = ({ className }: Props) => {
       <CheckboxFilterGroup
         className="mt-5"
         title="Ingredients"
-        limit={6}
+        limit={5}
         items={[
           { text: "ingredient-1", value: "ingredient-1" },
           { text: "ingredient-2", value: "ingredient-2" },
           { text: "ingredient-3", value: "ingredient-3" },
+          { text: "ingredient-4", value: "ingredient-4" },
+          { text: "ingredient-5", value: "ingredient-5" },
+          { text: "ingredient-16", value: "ingredient-16" },
         ]}
       />
     </div>
