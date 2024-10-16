@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 import { useCategoryStore } from "@/store/category";
 
 const categories = [
-  { id: "categoryId-1", name: "categoryName-1" },
-  { id: "categoryId-2", name: "categoryName-2" },
-  { id: "categoryId-3", name: "categoryName-3" },
+  { id: "categoryId-1", name: "CLOTHING" },
+  { id: "categoryId-2", name: "BRIDAL" },
+  { id: "categoryId-3", name: "HOMEWARES" },
 ];
 
 export const Categories = () => {

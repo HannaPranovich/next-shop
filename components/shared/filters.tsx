@@ -4,7 +4,7 @@ import { Input } from "../ui";
 export const Filters = () => {
   return (
     <div>
-      <Title text="Filters" className="mb-5 font-bold" />
+      <Title text="Filter by" className="mb-5 font-bold" />
 
       <div className="flex flex-col gap-4">
         <FilterCheckbox text="option-1" value="option-1" />
