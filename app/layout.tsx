@@ -23,8 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.variable}>
         <Header />
-        {children}
-        <main className="min-h-screen bg-white"></main>
+        <main className="min-h-screen bg-white"> {children}</main>
       </body>
     </html>
   );

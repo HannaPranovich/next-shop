@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import { Button } from "../ui";
-import { Container } from "./";
+import { Container, SearchInput } from "./";
 import { ArrowRight, ShoppingCart, User } from "lucide-react";
 
 interface Props {
@@ -12,8 +12,10 @@ interface Props {
 export const Header = ({ className }: Props) => {
   return (
     <header className={cn("border border-b", className)}>
-      <Container className="flex items-center justify-between py-8">
+      <Container className="flex items-center justify-between py-8 gap-5">
         <Image src="/logobohobird.webp" alt="logo" width={150} height={110} />
+
+        <SearchInput />
 
         <div className="flex items-center gap-3">
           <Button variant="outline" className="flex items-center gap-1">
