@@ -12,15 +12,9 @@ export const Filters = () => {
       </div>
 
       <div className="mt-5 border-y border-y-neutral-100 py-6 pb-7">
-        <p className="font-bold mb-3">Price:</p>
-        <div className="flex gap-3 mb-5">
-          <Input
-            type="number"
-            placeholder="0"
-            min={0}
-            max={100}
-            defaultValue={0}
-          />
+        <p className="mb-3 font-bold">Price:</p>
+        <div className="mb-5 flex gap-3">
+          <Input type="number" placeholder="0" min={0} max={100} defaultValue={0} />
           <Input type="number" min={0} max={100} placeholder="100" />
         </div>
       </div>

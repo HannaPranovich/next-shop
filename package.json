@@ -9,7 +9,10 @@
     "lint": "next lint",
     "prisma:studio": "prisma studio",
     "prisma:push": "prisma db push",
-    "prisma:seed": "prisma db seed"
+    "prisma:seed": "prisma db seed",
+    "prettier": "prettier --list-different",
+    "prettier:format:check": "prettier \"./**/*.{js,jsx,ts,tsx}\" --check",
+    "prettier:format:write": "prettier \"./**/*.{js,jsx,ts,tsx}\" --write"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -44,6 +47,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

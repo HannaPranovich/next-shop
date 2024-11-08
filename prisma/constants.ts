@@ -209,12 +209,8 @@ const bottoms: Prisma.ProductCreateInput[] = [
   },
 }));
 
-export const categories: Prisma.CategoryCreateInput[] = Object.values(
-  CATEGORY
-).map((value) => ({ name: value }));
+export const categories: Prisma.CategoryCreateInput[] = Object.values(CATEGORY).map((value) => ({
+  name: value,
+}));
 
-export const products: Prisma.ProductCreateInput[] = [
-  ...dresses,
-  ...tops,
-  ...bottoms,
-];
+export const products: Prisma.ProductCreateInput[] = [...dresses, ...tops, ...bottoms];

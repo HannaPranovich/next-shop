@@ -1,0 +1,9 @@
+.github
+build
+dist
+node_modules
+docker-data
+
+.env
+
+tailwind.config.ts

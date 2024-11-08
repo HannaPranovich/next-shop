@@ -20,13 +20,13 @@ export const FilterCheckbox = ({
   return (
     <div className="flex items-center space-x-2">
       <Checkbox
-        className="rounded-[8px] w-6 h-6"
+        className="h-6 w-6 rounded-[8px]"
         checked={checked}
         id={id}
         onCheckedChange={onCheckedChange}
         value={value}
       />
-      <label className="leading-none cursor-pointer flex-1" htmlFor={id}>
+      <label className="flex-1 cursor-pointer leading-none" htmlFor={id}>
         {text}
       </label>
       {endAdornment}

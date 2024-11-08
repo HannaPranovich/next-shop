@@ -26,9 +26,7 @@ const processItems = ({
   const shouldFilterItems = Boolean(searchValue);
 
   return shouldFilterItems
-    ? rawItems.filter(({ text }) =>
-        text.toLowerCase().includes(searchValue.toLowerCase())
-      )
+    ? rawItems.filter(({ text }) => text.toLowerCase().includes(searchValue.toLowerCase()))
     : rawItems;
 };
 
@@ -39,12 +37,12 @@ export const CheckboxFilterGroup = (props: Props) => {
 
   return (
     <div className={className}>
-      <p className="font-bold mb-3">{title}</p>
+      <p className="mb-3 font-bold">{title}</p>
 
       {isExceedsLimit ? (
         <CheckboxFilterGroupWithSearch {...props} />
       ) : (
-        <div className="flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar">
+        <div className="scrollbar flex max-h-96 flex-col gap-4 overflow-auto pr-2">
           {items.map(({ text, value, endAdornment }, index) => (
             <FilterCheckbox
               key={index}
@@ -84,14 +82,14 @@ const CheckboxFilterGroupWithSearch = ({
       {showAll && (
         <div className="mb-5">
           <Input
-            className="bg-gray-50 border-none"
+            className="border-none bg-gray-50"
             placeholder={searchInputPlaceholder}
             onChange={handleChangeSearchInput}
           />
         </div>
       )}
 
-      <div className="flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar">
+      <div className="scrollbar flex max-h-96 flex-col gap-4 overflow-auto pr-2">
         {itemsToDisplay.map(({ text, value, endAdornment }, index) => (
           <FilterCheckbox
             key={index}
@@ -104,11 +102,8 @@ const CheckboxFilterGroupWithSearch = ({
         ))}
       </div>
 
-      <div className={showAll ? "border-t border-t-neutral-100 mt-4" : ""}>
-        <button
-          className="text-primary mt-3"
-          onClick={() => setShowAll(!showAll)}
-        >
+      <div className={showAll ? "mt-4 border-t border-t-neutral-100" : ""}>
+        <button className="mt-3 text-primary" onClick={() => setShowAll(!showAll)}>
           {showAll ? "Hide" : "+ ShowAll"}
         </button>
       </div>

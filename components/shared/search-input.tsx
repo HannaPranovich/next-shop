@@ -23,21 +23,15 @@ export const SearchInput = () => {
 
   return (
     <>
-      {isFocused && (
-        <div className="fixed top-0 left-0 bottom-0 right-0 bg-black/50 z-20" />
-      )}
-      <div className={cn("w-full relative", isFocused && "z-20")}>
-        <div
-          className={cn(
-            "flex flex-1 justify-between relative h-11 rounded-2xl "
-          )}
-        >
+      {isFocused && <div className="fixed bottom-0 left-0 right-0 top-0 z-20 bg-black/50" />}
+      <div className={cn("relative w-full", isFocused && "z-20")}>
+        <div className={cn("relative flex h-11 flex-1 justify-between rounded-2xl")}>
           <Search
-            className="absolute top-1/2 translate-y-[-50%] left-3 h-5 text-gray-400"
+            className="absolute left-3 top-1/2 h-5 translate-y-[-50%] text-gray-400"
             onClick={handleIconClick}
           />
           <input
-            className={"rounded-2xl outline-none w-full bg-gray-100 pl-11"}
+            className={"w-full rounded-2xl bg-gray-100 pl-11 outline-none"}
             onChange={handleChange}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
@@ -48,10 +42,10 @@ export const SearchInput = () => {
           />
         </div>
         {isFocused && searchQuery && (
-          <ul className="absolute left-0 right-0 top-14 bg-white rounded-xl py-3 shadow-md transition-all duration-200 ">
+          <ul className="absolute left-0 right-0 top-14 rounded-xl bg-white py-3 shadow-md transition-all duration-200">
             <li
               key={"index"}
-              className="p-2 hover:bg-gray-100 cursor-pointer"
+              className="cursor-pointer p-2 hover:bg-gray-100"
               onClick={() => {
                 setSearchQuery("");
                 setIsFocused(false);
